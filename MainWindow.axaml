@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Ava2.MainWindow"
+        Title="Ava2">
+
+    <DockPanel Margin="4">
+      <TabControl>
+        <TabItem Header="{Binding FirstPageName}">
+          <StackPanel Orientation="Vertical" Spacing="20">
+
+            <TextBlock Text="Концентрация (%), которая есть:" />
+            <TextBox Text="{Binding СoncentrationWeHave}" />
+
+            <TextBlock Text="Концентрация (%), которую нужно получить:" />
+            <TextBox Text="{Binding СoncentrationWeNeed}" />
+
+            <TextBlock Text="Объем, который нужно получить:" />
+            <TextBox Text="{Binding VolumeWeNeed}" />
+
+            <TextBlock Text="Столько добавить воды:" />
+            <TextBox Text="{Binding WaterVolume}" IsReadOnly="True" />
+
+            <TextBlock Text="Столько добавить раствора:" />
+            <TextBox Text="{Binding SolutionVolume}" IsReadOnly="True" />
+
+          </StackPanel>
+        </TabItem>
+      </TabControl>
+    </DockPanel>
+
+</Window>
